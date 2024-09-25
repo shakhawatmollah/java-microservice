@@ -47,3 +47,11 @@ The School Microservice manages school-related data and operations, including ad
 ### Using OpenFeign
 
 This project demonstrates inter-service communication using OpenFeign, a declarative REST client that simplifies service-to-service communication within the microservices ecosystem.
+
+### Postman Collection
+
+Import Postman collection to quickly get started.
+
+Collection:
+
+[![Collection](https://run.pstmn.io/button.svg)](https://github.com/shakhawatmollah/java-microservice/tree/main/postman/spring-boot-microservices.postman_collection.json)

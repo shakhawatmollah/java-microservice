@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "fe7d3a7a-fc56-4669-9465-fbff51e24684",
+		"name": "spring-boot-microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4743469"
+	},
+	"item": [
+		{
+			"name": "Create School",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{$randomCompanyName}}\",\r\n    \"email\": \"{{$randomEmail}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8222/api/v1/schools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8222",
+					"path": [
+						"api",
+						"v1",
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"schoolId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8222/api/v1/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8222",
+					"path": [
+						"api",
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get School",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8222/api/v1/schools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8222",
+					"path": [
+						"api",
+						"v1",
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get School with Students",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8222/api/v1/schools/with-students/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8222",
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"with-students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student By School",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8222/api/v1/students/school/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8222",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"school",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
