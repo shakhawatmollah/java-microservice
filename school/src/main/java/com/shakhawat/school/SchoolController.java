@@ -30,4 +30,9 @@ public class SchoolController {
         return ResponseEntity.ok(service.findSchoolsWithStudents(schoolId));
     }
 
+    @DeleteMapping("/delete/{schoolId}")
+    public ResponseEntity<String> deleteStudentsBySchoolId(@PathVariable("schoolId") Integer schoolId) {
+        return ResponseEntity.ok(service.deleteStudentsBySchoolId(schoolId));
+    }
+
 }
