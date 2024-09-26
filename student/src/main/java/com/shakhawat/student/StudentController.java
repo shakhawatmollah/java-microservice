@@ -25,9 +25,21 @@ public class StudentController {
         return ResponseEntity.ok(service.findAllStudents());
     }
 
-    @GetMapping("/school/{school-id}")
-    public ResponseEntity<List<Student>> findAllStudents(@PathVariable("school-id") Integer schoolId) {
+    @GetMapping("/school/{schoolId}")
+    public ResponseEntity<List<Student>> findAllStudents(@PathVariable("schoolId") Integer schoolId) {
         return ResponseEntity.ok(service.findAllStudentsBySchool(schoolId));
+    }
+
+    @DeleteMapping("/school/{schoolId}")
+    public ResponseEntity<String> deleteStudentsBySchoolId(@PathVariable Integer schoolId) {
+        var deletedRecord = service.deleteStudentBySchoolId(schoolId);
+        return ResponseEntity.status(HttpStatus.OK).body("Deleted record(s) ".concat(String.valueOf(deletedRecord)));
+    }
+
+    @DeleteMapping("/delete/{schoolId}")
+    public ResponseEntity<List<Student>> deleteBySchoolId(@PathVariable Integer schoolId) {
+        var rs = service.deleteStudentsBySchoolId(schoolId);
+        return ResponseEntity.status(HttpStatus.OK).body(rs);
     }
 
 }

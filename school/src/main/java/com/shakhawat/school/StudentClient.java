@@ -9,7 +9,7 @@ import java.util.List;
 @FeignClient(name = "student-service", url = "${application.config.students-url}")
 public interface StudentClient {
 
-    @GetMapping("/school/{school-id}")
-    List<Student> findAllStudentsBySchool(@PathVariable("school-id") Integer schoolId);
+    @GetMapping("/school/{schoolId}")
+    List<Student> findAllStudentsBySchool(@PathVariable("schoolId") Integer schoolId);
 
 }
